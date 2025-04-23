@@ -60,13 +60,18 @@ namespace PedidosApp_ManuelaCastano
                 RegistroPedidos.Instance.AgregarPedido(pedido);
 
                 lblResultado.Text = $"Señor/a: {pedido.Cliente}\n" + 
-                    $" Su entrega será por : {pedido.MetodoEntrega.TipoEntrega()}\n" + 
+                    $" Su entrega será por: {pedido.MetodoEntrega.TipoEntrega()}\n" + 
                     $" Tiene un costo de: ${pedido.ObtenerCosto():0.00}";
             }
             catch (Exception ex) 
                 {
                 MessageBox.Show("Error: " + ex.Message);
                 }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
