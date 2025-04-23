@@ -26,6 +26,30 @@ namespace PedidosApp_ManuelaCastano
         {
             try
             {
+                if(string.IsNullOrWhiteSpace(txtCliente.Text))
+                {
+                    MessageBox.Show("Por favor, ingrese un nombre de cliente.");
+                    return;
+                }
+
+                if(cmbProducto.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione un producto.");
+                    return;
+                }
+
+                if (nudPeso.Value <= 0)
+                {
+                    MessageBox.Show("El peso debe ser mayor a 0.");
+                    return;
+                }
+
+                if (nudDistancia.Value <= 0)
+                {
+                    MessageBox.Show("La distancia debe ser mayor a 0.");
+                    return;
+                }
+
                 string cliente = txtCliente.Text;
                 string producto = cmbProducto.SelectedItem.ToString();
                 bool urgente = chkUrgente.Checked;
@@ -35,7 +59,9 @@ namespace PedidosApp_ManuelaCastano
                 Pedido pedido = new Pedido(cliente, producto, urgente, peso, distancia);
                 RegistroPedidos.Instance.AgregarPedido(pedido);
 
-                lblResultado.Text = $"Entrega: {pedido.MetodoEntrega.TipoEntrega()}" + $"Costo: ${pedido.ObtenerCosto():0.00}";
+                lblResultado.Text = $"Señor/a: {pedido.Cliente}\n" + 
+                    $" Su entrega será por : {pedido.MetodoEntrega.TipoEntrega()}\n" + 
+                    $" Tiene un costo de: ${pedido.ObtenerCosto():0.00}";
             }
             catch (Exception ex) 
                 {
