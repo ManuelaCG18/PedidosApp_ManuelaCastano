@@ -27,7 +27,7 @@ namespace PedidosApp_ManuelaCastano
             comboBoxFiltro.Items.Add("Dron");
             comboBoxFiltro.Items.Add("Bicicleta");
             comboBoxFiltro.SelectedIndex = 0;
-            comboBoxFiltro.SelectedIndexChanged += ComboBoxFiltro_SelectedIndexChanged;
+            comboBoxFiltro.SelectedIndexChanged += comboBoxFiltro_SelectedIndexChanged;
         }
         private void comboBoxFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {

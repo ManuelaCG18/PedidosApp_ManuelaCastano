@@ -29,6 +29,12 @@ namespace PedidosApp_ManuelaCastano
             }
         }
 
+        public List<Pedido> ObtenerPedidos()
+        {
+            return Pedidos;
+        }
+
+
         public void AgregarPedido(Pedido pedido)
         {
             Pedidos.Add(pedido);
