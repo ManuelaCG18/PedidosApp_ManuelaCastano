@@ -10,12 +10,14 @@ namespace PedidosApp_ManuelaCastano
     {
         public static IMetodoEntrega CrearEntrega(string TipoProducto, bool urgente, double peso)
         {
-            if ( TipoProducto == "tecnología" && urgente)
-                return new EntregaDron();
-                else if (TipoProducto == "accesorio")
-                    return new EntregaMoto();
-                    else if (TipoProducto == "componente" || peso > 10)
-                        return new EntregaCamion();
+
+            if (TipoProducto == "")
+                else if (TipoProducto == "tecnología" && urgente)
+                    return new EntregaDron();
+                    else if (TipoProducto == "accesorio")
+                        return new EntregaMoto();
+                        else if (TipoProducto == "componente" || peso > 10)
+                            return new EntregaCamion();
             else
             {
                 return new EntregaMoto(); // es un valor por defecto
