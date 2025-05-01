@@ -65,7 +65,7 @@
             this.dataGridViewPedidos.Name = "dataGridViewPedidos";
             this.dataGridViewPedidos.RowHeadersWidth = 62;
             this.dataGridViewPedidos.RowTemplate.Height = 28;
-            this.dataGridViewPedidos.Size = new System.Drawing.Size(502, 444);
+            this.dataGridViewPedidos.Size = new System.Drawing.Size(706, 444);
             this.dataGridViewPedidos.TabIndex = 1;
             // 
             // colCliente
@@ -144,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 588);
+            this.ClientSize = new System.Drawing.Size(1108, 588);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewPedidos);
             this.Controls.Add(this.comboBoxFiltro);
