@@ -73,5 +73,11 @@ namespace PedidosApp_ManuelaCastano
         {
 
         }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            HistorialPedidosForm historial = new HistorialPedidosForm();
+            historial.ShowDialog();
+        }
     }
 }

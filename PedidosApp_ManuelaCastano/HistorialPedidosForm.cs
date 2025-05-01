@@ -44,8 +44,18 @@ namespace PedidosApp_ManuelaCastano
             dataGridViewPedidos.Rows.Clear();
             foreach (var p in pedidos)
             {
-                dataGridViewPedidos.Rows.Add(p.Cliente, p.Producto, p.Peso, p.Distancia, p.Urgente, p.MetodoEntrega.TipoEntrega(), p.ObtenerCosto());
+                dataGridViewPedidos.Rows.Add(
+                    p.Cliente,
+                    p.Producto,
+                    p.Peso,
+                    p.Distancia,
+                    p.Urgente,
+                    p.MetodoEntrega.TipoEntrega(), // Método de entrega (ej: "Bicicleta")
+                    p.ObtenerCosto()              // Costo calculado
+                );
             }
         }
+
+        
     }
 }
